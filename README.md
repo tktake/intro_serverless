@@ -85,7 +85,51 @@ git branch <branch name>
 
 ```
 $ git branch hogehoge
+$ git branch
+  hogehoge
+* master
 ```
+
+### `git checkout` でブランチを切り替える
+作成したブランチを切り替えるには、次の書式でコマンドを実行すれば良い。
+
+```
+git checkout <branch name>
+```
+
+先ほど作成したブランチに切り替える場合の実行例は次の通り。
+
+```
+$ git checkout hogehoge
+Switched to branch 'hogehoge'
+```
+
+### `git add` と `git commit` で変更差分を登録する
+ブランチの中でコードを作成・変更したら、まずは `git add` で変更に加える。
+
+```
+git add <path to file>
+```
+
+`git add` したコードをバックアップ可能な点として登録する (コミットする) ために、 `git commit` を次の書式で実行する。
+
+```
+git commit -m `commit message`
+```
+
+`commit message` には通常、変更点を簡潔に記載する (xxを修正、ooを追加、など) 。
+
+この時点ではまだローカルに変更点を登録しただけで、まだリモートには同期されていない。
+
+### `git push` でリモートブランチに同期
+ローカルブランチでコミットした内容をリモートに同期するために、次の書式で `git push` を実行する。
+
+```
+git push origin <branch name>
+```
+
+これにより、ローカルブランチと同名のリモートブランチが作成され、ブランチの内容が同期される。ここまでくれば、手元の端末から誤ってファイルを消してしまってもリモートブランチからファイルを復旧することができる。
+
 
 # サーバレス開発入門
 
@@ -98,7 +142,10 @@ AWSが提供するサーバレスコンピューティングサービスの一�
 
 ### AWS Lambda を使ってみる
 
-## Serverless Framework
+## Serverless Framework を使って Lambda function をデプロイする
+
+## 再びGitを使う
+作成したファイルを
 
 
 ## 参考文献
