@@ -1,0 +1,2 @@
+S3_TARGET_BUCKET: 'sl5-145-734315545835'
+S3_OBJECT_KEY: 'holidays.json'
