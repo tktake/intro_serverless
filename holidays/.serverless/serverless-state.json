@@ -30,7 +30,7 @@
               "",
               [
                 "arn:aws:s3:::",
-                "test-bucket-755464741486"
+                "sl5-145-734315545835"
               ]
             ]
           }
@@ -45,7 +45,7 @@
               "",
               [
                 "arn:aws:s3:::",
-                "test-bucket-755464741486",
+                "sl5-145-734315545835",
                 "/*"
               ]
             ]
@@ -157,7 +157,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/holidays/prd/1528011676978-2018-06-03T07:41:16.978Z/holidays.zip"
+                "S3Key": "serverless/holidays/prd/1528017765087-2018-06-03T09:22:45.087Z/holidays.zip"
               },
               "FunctionName": "holidays-prd-runner",
               "Handler": "handler.runner",
@@ -172,7 +172,7 @@
               "Timeout": 60,
               "Environment": {
                 "Variables": {
-                  "S3_TARGET_BUCKET": "test-bucket-755464741486",
+                  "S3_TARGET_BUCKET": "sl5-145-734315545835",
                   "S3_OBJECT_KEY": "holidays.json"
                 }
               }
@@ -182,14 +182,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "RunnerLambdaVersionNty6NEPp82zd8RX72rXK8lQAP93VEPufDc4shKGLQ": {
+          "RunnerLambdaVersionmXhrWLgVDwGyFFMdk2ICt52ctABq72pzY6MYL5jEE": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "RunnerLambdaFunction"
               },
-              "CodeSha256": "zM7WB3CV7Kgjkj2yoNuw5S0gr6+gGqCvuom6lFRjVwM="
+              "CodeSha256": "lJ9GG8pup71nHxJwDmJFc9ZudPar6zdaIxq6X5GcKcw="
             }
           }
         },
@@ -202,7 +202,7 @@
           "RunnerLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "RunnerLambdaVersionNty6NEPp82zd8RX72rXK8lQAP93VEPufDc4shKGLQ"
+              "Ref": "RunnerLambdaVersionmXhrWLgVDwGyFFMdk2ICt52ctABq72pzY6MYL5jEE"
             }
           }
         }
@@ -234,7 +234,7 @@
         "memorySize": 128,
         "timeout": 60,
         "environment": {
-          "S3_TARGET_BUCKET": "test-bucket-755464741486",
+          "S3_TARGET_BUCKET": "sl5-145-734315545835",
           "S3_OBJECT_KEY": "holidays.json"
         },
         "events": [],
@@ -243,10 +243,10 @@
         "vpc": {}
       }
     },
-    "artifact": "/Users/ma-yazawa/.ghq/github.com/Hikosaburou/intro_serverless/holidays/.serverless/holidays.zip"
+    "artifact": "C:\\Users\\taker\\Documents\\20180603\\intro_serverless\\holidays\\.serverless\\holidays.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/holidays/prd/1528011676978-2018-06-03T07:41:16.978Z",
+    "artifactDirectoryName": "serverless/holidays/prd/1528017765087-2018-06-03T09:22:45.087Z",
     "artifact": "holidays.zip"
   }
 }
